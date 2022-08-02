@@ -1,0 +1,1 @@
+[{"title":"Carpeta Nº 3","price":450.2,"thumbnail":"https://www.ramospapeleria.com.ar/img/p/35887/1.jpeg?quality=95&width=800&height=800&mode=max&upscale=false","id":1},{"title":"Carpeta Nº 3","price":450.2,"thumbnail":"https://www.ramospapeleria.com.ar/img/p/35887/1.jpeg?quality=95&width=800&height=800&mode=max&upscale=false","id":2}]
