@@ -1,0 +1,22 @@
+{
+  "name": "desafioclase12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index",
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "hbs": "^4.2.0",
+    "moment": "^2.29.4",
+    "socket.io": "^4.5.1"
+  }
+}
