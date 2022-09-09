@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "products": [
+      {
+        "title": "Producto 2",
+        "price": 40000,
+        "description": "Esta es la descripcion del Producto 2",
+        "code": "2",
+        "stock": 1000,
+        "thumbnail": "http://localhost:8080/images/procesador.png",
+        "id": 2,
+        "timestamp": 1650908102594
+      },
+      {
+        "title": "Producto 4",
+        "price": 250000,
+        "description": "Descripcion Producto 4",
+        "code": "4",
+        "stock": 999,
+        "thumbnail": "http://localhost:8080/images/placadevideo.png",
+        "id": 4,
+        "timestamp": 1650930103186
+      }
+    ],
+    "timestamp": 1650908118252
+  }
+]

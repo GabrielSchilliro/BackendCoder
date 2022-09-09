@@ -1,0 +1,1 @@
+console.log("hola"),console.log("tu nariz"),console.log("contra mis bolas");

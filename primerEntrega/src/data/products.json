@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Producto 1",
+        "price": 12000,
+        "description": "Esta es la descripcion del Producto 1",
+        "code": "1",
+        "stock": 50,
+        "thumbnail": "http://localhost:8080/images/motherboard.png",
+        "id": 1,
+        "timestamp": 1650908068219
+    },
+    {
+        "title": "Producto 2",
+        "price": 40000,
+        "description": "Esta es la descripcion del Producto 2",
+        "code": "2",
+        "stock": 1000,
+        "thumbnail": "http://localhost:8080/images/procesador.png",
+        "id": 2,
+        "timestamp": 1650908102594
+    },
+    {
+        "title": "Producto 3",
+        "price": 18000,
+        "description": "Descripcion del Producto 3",
+        "code": "3",
+        "stock": 750,
+        "thumbnail": "http://localhost:8080/images/memoriaram.png",
+        "id": 3,
+        "timestamp": 1650910828929
+    },
+    {
+        "title": "Producto 4",
+        "price": 250000,
+        "description": "Descripcion Producto 4",
+        "code": "4",
+        "stock": 999,
+        "thumbnail": "http://localhost:8080/images/placadevideo.png",
+        "id": 4,
+        "timestamp": 1650930103186
+    }
+]
