@@ -1,0 +1,116 @@
+1 & 2)
+
+-Creo la base de datos
+
+use ecommerce
+
+-Creo las colecciones
+
+db.createCollection('productos')
+db.createCollection('mensajes')
+
+-Inserto los productos
+
+db.productos.insertMany([
+    {
+        "title": "Producto 1",
+        "price": 120,
+        "thumbnail": "Url1.com"
+    },
+    {
+        "title": "Producto 2",
+        "price": 580,
+        "thumbnail": "Url2.com"
+    },
+    {
+        "title": "Producto 3",
+        "price": 900,
+        "thumbnail": "Url3.com"
+    },
+    {
+        "title": "Producto 4",
+        "price": 1280,
+        "thumbnail": "Url4.com"
+    },
+    {
+        "title": "Producto 5",
+        "price": 1700,
+        "thumbnail": "Url5.com"
+    },
+    {
+        "title": "Producto 6",
+        "price": 2300,
+        "thumbnail": "Url6.com"
+    },
+    {
+        "title": "Producto 7",
+        "price": 2860,
+        "thumbnail": "Url7.com"
+    },
+    {
+        "title": "Producto 8",
+        "price": 3350,
+        "thumbnail": "Url8.com"
+    },
+    {
+        "title": "Producto 9",
+        "price": 4320,
+        "thumbnail": "Url9.com"
+    },
+    {
+        "title": "Producto 10",
+        "price": 4990,
+        "thumbnail": "Url10.com"
+    }
+])
+
+3) Listo todos los productos
+
+db.productos.find()
+
+4) Cuento la cantidad de documentos en productos
+
+db.producots.countDocuments()
+
+5) CRUD
+a) Agrego un producto en la coleccion productos
+
+db.productos.insertOne({
+    "title": "Producto 11",
+    "price": 5200,
+    "thumbnail": "Url11.com"
+})
+
+b)
+i) Listo productos con precio menor a 1000 pesos:
+
+db.productos.find({price: {$lt: 1000}})
+
+ii) Listo los productos con precio entre 1000 y 3000 pesos
+
+db.productos.find({price: {$gt: 1000, $lt: 3000}})
+
+iii) Listo los productos con precio mayor a 3000 pesos,
+
+db.productos.find({price: {$gt: 3000}})
+
+iv) Consulta que traiga solo el nombre del tercer producto más barato.
+
+db.productos.find({},{title:1, _id:0}).sort({price:1}).skip(2).limit(1);
+
+c) Actualización sobre los productos agregando el campo stock a todos ellos con valor de 100
+
+db.productos.updateMany({}, {$inc: {stock: 100}});
+
+d) Cambio el stock a cero de los productos con precios mayores a 4000 pesos
+
+db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock: 0}});
+
+e) Borro los productos con precio menor a 1000 pesos
+
+db.productos.deleteMany({price: {$lt: 1000}});
+
+6) Creo el usuario 'pepe' con contraseña 'asd456' y permiso de solo lectura.
+
+db.createUser({ user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerce"}]})
+
