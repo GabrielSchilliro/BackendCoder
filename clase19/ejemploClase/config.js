@@ -1,0 +1,2 @@
+/* export const CNX_STR = 'mongodb://root:gismongo@localhost/ecommerce?authSource=admin'; */
+export const CNX_STR = 'mongodb+srv://root:gismongo@cluster0.m7syyp5.mongodb.net/Ecommerce?retryWrites=true&w=majority';
