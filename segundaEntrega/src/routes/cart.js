@@ -6,7 +6,7 @@ const router = express.Router();
 const carritoDao = new CarritoDao();
 
 // POST /api/carrito
-router.post('/', async (_req, res) => {
+router.post('/', async (req, res) => {
     const newCart = await carritoDao.createCart();
 
     newCart

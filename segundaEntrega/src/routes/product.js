@@ -4,14 +4,16 @@ import { authMiddleware } from "../middlewares/Auth.js";
 const router = express.Router();
 const productoDao = new ProductoDao();
 
-
 // GET api/productos
-
-router.get('/', async (_req, res) => {
-    const products = await productoDao.getAll();
-    products
-        ? res.status(200).json(products)
-        : res.status(400).json({ "error": "Ocurrio un error al obtenerer todos los productos" })
+router.get('/', async (req, res) => {
+    try {
+        const products = await productoDao.getAll();
+        products
+            ? res.status(200).json(products)
+            : res.status(400).json({ "error": "Ocurrio un error al obtenerer todos los productos" })
+    } catch (error) {
+        console.log(error);
+    }
 
 })
 
@@ -61,7 +63,5 @@ router.delete('/:id', authMiddleware, async (req, res) => {
         ? res.status(200).json({ "success": "Producto eliminado con exito" })
         : res.status(404).json({ "error": "Producto no encontrado" })
 })
-
-
 
 export default router;
