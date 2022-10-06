@@ -6,14 +6,10 @@ const productoDao = new ProductoDao();
 
 // GET api/productos
 router.get('/', async (req, res) => {
-    try {
-        const products = await productoDao.getAll();
-        products
-            ? res.status(200).json(products)
-            : res.status(400).json({ "error": "Ocurrio un error al obtenerer todos los productos" })
-    } catch (error) {
-        console.log(error);
-    }
+    const products = await productoDao.getAll();
+    products
+        ? res.status(200).json(products)
+        : res.status(400).json({ "error": "Ocurrio un error al obtener todos los productos" })
 
 })
 
